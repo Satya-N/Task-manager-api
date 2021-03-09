@@ -6,7 +6,45 @@ const userRouter = require('./routers/user-router')
 const taskRouter = require('./routers/tasks-router')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
+
+/////////      FILE UPLOAD IN EXPRESS     ///////////
+
+// const multer = require('multer')
+// const upload = multer({
+//     dest: 'images',
+//     limits: {
+//         fileSize: 1000000
+//     },
+//     fileFilter(req, file, cb) {
+//         if (!file.originalname.match(/\.(doc|docx)$/)) {
+//             return cb(new Error('File must be Word Document'))
+//         }
+//         cb(undefined, true)
+//             // cb(new Error('File Must be PDF'))
+//             // cb(undefined, true)
+//             // cb(undefined,false) 
+//     }
+// })
+
+
+// app.post('/upload', upload.single('upload'), (req, res) => {
+//     res.send()
+// }, (error, req, res, next) => {
+//     res.status(400).send({ error: error.message })
+// })
+
+
+
+
+
+///////////////////////////////////////////////////
+
+
+
+
+
+
 
 // app.use((req, res, next) => {
 //     if (req.method === 'GET') {
@@ -53,16 +91,16 @@ app.listen(port, () => {
 // myfunc()
 
 
-const Task = require('./models/task')
-const User = require('./models/user')
+// const Task = require('./models/task')
+// const User = require('./models/user')
 
-const main = async() => {
-    // const task = await Task.findById('6026a64b5923b00189bf6339')
-    // await task.populate('owner').execPopulate()
-    // console.log(task.owner)
-    // const user = await User.findById('6026a4ae42dc6f8ff82e52b5')
-    // await user.populate('usertasks').execPopulate()
-    // console.log(user.usertasks)
-}
+// const main = async() => {
+// const task = await Task.findById('6026a64b5923b00189bf6339')
+// await task.populate('owner').execPopulate()
+// console.log(task.owner)
+// const user = await User.findById('6026a4ae42dc6f8ff82e52b5')
+// await user.populate('usertasks').execPopulate()
+// console.log(user.usertasks)
+// }
 
-main()
+// main()
